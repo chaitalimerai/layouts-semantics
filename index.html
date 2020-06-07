@@ -1,22 +1,228 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Layouts with Semantics</title>
+  <!-- favicon -->
+  <link href="" rel="icon" type="image/x-icon">
+  <!-- fonts css -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- animate css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <!-- bootstrap css -->
+  <link href="assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- custom css -->
+  <link href="assets/css/style.min.css" rel="stylesheet">
+  <!-- responsive css -->
+  <link href="assets/css/responsive.css" rel="stylesheet">
+</head>
 
-    <title>Semantics Layouts</title>
-  </head>
-  <body>
-    <h1>Hello, Chaitali Merai!</h1>
+<body>
+  <div class="main-wrapper">
+    <!-- header -->
+    <header class="main-header navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/images/logo.png" class="logo" alt="Logo">
+      </a>
+      <button class="navbar-toggler btn btn-transprent" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="fas fa-align-justify icons"></span>
+      </button>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  </body>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="primary-custom-nav nav nav-pills" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="layout1-tab" data-toggle="tab" href="#layout1" role="tab" aria-controls="layout1"
+              aria-selected="true">Layout1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="layout2-tab" data-toggle="tab" href="#layout2" role="tab" aria-controls="layout2"
+              aria-selected="false">Layout2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="layout3-tab" data-toggle="tab" href="#layout3" role="tab" aria-controls="layout3"
+              aria-selected="false">Layout3</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- Ends:header -->
+
+    <!-- main wrapper -->
+    <div class="main-content-wrapper">
+      <input type="checkbox" id="primaryNavBtn">
+      <nav class="primary-nav">
+        <div class="row justify-content-end d-flex d-lg-none">
+          <label for="primaryNavBtn" class="btn btn-transprent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-window-close text-dark"></span>
+          </label>
+        </div>
+        <div class="primary-custom-nav nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+          aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+          <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
+            aria-controls="v-pills-home" aria-selected="true">Home</a>
+          <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab"
+            aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab"
+            aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab"
+            aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+        </div>
+      </nav>
+      <section class="content-wrapper">
+        <header class="content-header">
+          <label for="primaryNavBtn" class="btn btn-transprent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-align-right icons"></span>
+          </label>
+          <h4 class="h4">Content-section</h4>
+          <label for="secondaryNavBtn" class="btn btn-transprent" type="button" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="fas fa-align-left icons"></span>
+            </button>
+        </header>
+        <div class="content-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore pariatur labore ut molestias unde assumenda
+            culpa omnis reiciendis, vero excepturi officia ex reprehenderit, mollitia blanditiis ipsam. Eum quibusdam et
+            soluta perferendis cumque rem placeat nesciunt quae error autem, ab cum, rerum hic culpa atque aliquid fugit
+            quas vero? Dolorem optio libero reiciendis, numquam veritatis aspernatur beatae explicabo consequatur veniam
+            rem cumque similique, non exercitationem. Eligendi repellat alias illo, quisquam excepturi sapiente, magnam
+            debitis amet corporis nam dolore impedit unde ipsa temporibus, quae ipsam ratione soluta nemo eveniet ullam
+            molestiae. Quis laborum dolorum, expedita magnam numquam tenetur laboriosam sapiente iusto consequuntur
+            assumenda saepe aspernatur sint veniam ipsum. Nostrum pariatur officiis sunt reprehenderit explicabo quasi
+            consequuntur laborum odit quos ducimus dignissimos ullam nisi eum reiciendis quidem, molestiae dolores rem
+            quae nobis non quibusdam aliquam? Sunt in, iure impedit praesentium, dolorum suscipit est id, laudantium
+            alias
+            voluptas fugit libero cum dolor quis minima illum perferendis eaque porro repellat tempore? Quos deleniti
+            repudiandae ratione voluptates laborum rem et earum similique. Autem repellat tempore necessitatibus
+            reprehenderit dolores eveniet doloremque ex cumque, esse, officiis suscipit quod, possimus sed sit
+            laudantium
+            beatae! Natus dignissimos, eaque voluptatum quam rerum officiis at. Consequuntur recusandae iste quisquam,
+            in
+            eum vel autem, totam quidem, doloremque velit ipsam quas obcaecati ducimus explicabo omnis voluptas sit!
+            Dolores placeat nulla similique exercitationem deserunt voluptas dicta sed in, animi reiciendis minima culpa
+            expedita distinctio! Eos sint fuga quis assumenda sapiente. Impedit iusto, dolorem amet rem quisquam
+            distinctio maxime laboriosam praesentium quod libero fuga dolor culpa odit et sunt enim consequatur
+            laudantium
+            provident delectus fugit aspernatur veniam similique sapiente tenetur! Voluptate illo nam placeat ipsa
+            numquam, ab perspiciatis eligendi debitis praesentium, eaque explicabo voluptatem ullam cum reiciendis eum
+            suscipit laudantium, accusamus deleniti libero officia! Possimus rem tempora placeat ducimus, sequi deleniti
+            voluptates minima atque beatae et sit tempore laboriosam architecto quos eaque doloremque molestias,
+            repellendus quibusdam eum asperiores unde, nobis voluptatem! A ad, amet omnis temporibus et quo corporis non
+            voluptates nesciunt? Alias eos veniam sequi ab delectus ipsam omnis quia beatae earum quas, facilis illum,
+            minus, velit nobis ratione at dignissimos laboriosam veritatis suscipit ad consequuntur libero nihil
+            laudantium sed? Quidem eius inventore earum cum! Omnis quaerat corporis sed nulla soluta porro autem dolorum
+            iusto impedit excepturi ipsum eligendi ipsa illo perspiciatis reprehenderit minus debitis, provident
+            explicabo
+            deleniti nisi hic recusandae sunt. Veritatis voluptas esse debitis inventore tempora quo voluptatibus
+            deleniti
+            architecto alias, consectetur, perferendis quaerat non facilis magni sed quam iure assumenda ipsum quis ex
+            aut? Quis molestiae asperiores autem quod repellendus eius eligendi, totam quisquam eaque odit! Sequi, quos
+            ipsam alias nobis a fugiat vitae quia culpa, ipsum blanditiis praesentium eum assumenda suscipit odio
+            reiciendis magni esse architecto incidunt sint? Beatae consequuntur quo repudiandae id exercitationem
+            voluptatibus! In iure quod voluptas mollitia neque dolor impedit, tempore laboriosam accusamus distinctio!
+            Sint architecto odio voluptate nulla iusto obcaecati, veniam ducimus! Sequi recusandae hic assumenda velit,
+            delectus ea modi labore est fuga molestiae at iste reiciendis maiores quae, repellat beatae minus eius eos
+            nobis. Autem magni beatae voluptatum rerum ut cupiditate mollitia at nesciunt nostrum. Quo placeat rem
+            mollitia sunt, suscipit consequuntur exercitationem saepe quaerat officia soluta porro veritatis
+            reprehenderit
+            natus velit nisi cum cumque debitis dolores aperiam esse. Quod ex, consequuntur aut hic exercitationem vitae
+            alias ratione. Perferendis, dignissimos tenetur dolorem esse nisi impedit libero doloribus dolore. Omnis
+            neque
+            recusandae voluptate adipisci saepe ea culpa. Ipsum perferendis, magni a laboriosam voluptatem, error
+            necessitatibus odio neque, nesciunt quae possimus enim quaerat sit? Cumque enim rerum, excepturi fuga, odio
+            fugiat itaque, nesciunt facilis impedit corrupti quasi doloremque sed illum aut qui. Reprehenderit nostrum
+            quae iusto facilis quis. Enim perspiciatis voluptate at incidunt explicabo temporibus quas perferendis sint
+            dolor odio dicta ipsa nisi quae vitae excepturi eius harum, accusamus quos maxime, illo consectetur quam
+            voluptas! Distinctio at reiciendis labore doloribus illum cum eveniet porro, obcaecati soluta quod aliquam
+            delectus adipisci natus assumenda minima saepe incidunt officiis magnam culpa sapiente veniam sint quasi
+            dolorem praesentium. Quia nobis repellat tempore obcaecati dicta doloremque optio in aperiam iste neque
+            eligendi, facilis inventore praesentium voluptates doloribus vel. Tempore, vero. Quidem aut eaque, commodi
+            omnis, ea vitae accusantium mollitia velit laudantium et magnam deleniti doloremque amet modi accusamus,
+            dignissimos consequatur. Eum, error repudiandae.</p>
+        </div>
+      </section>
+      <input type="checkbox" id="secondaryNavBtn">
+      <aside class="secondary-nav">
+        <div class="row justify-content-end d-flex d-lg-none">
+          <label for="secondaryNavBtn" class="btn btn-transprent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fas fa-window-close text-dark"></span>
+          </label>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Cras justo odio</li>
+            <li class="list-group-item">Dapibus ac facilisis in</li>
+            <li class="list-group-item">Vestibulum at eros</li>
+          </ul>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <!-- Ends:main wrapper -->
+  </div>
+  <!-- Javascript -->
+  <script src="assets/vendors/jquery/jquery.min.js"></script>
+  <script src="assets/vendors/bootstrap/js/popper.min.js"></script>
+  <script src="assets/vendors/bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+
+</body>
+
 </html>
